@@ -153,6 +153,7 @@ function hit(){
     var i=document.getElementById(el)
     var t=i.previousElementSibling
      t.style.textDecorationLine = "line-through";
+     i.remove()
      
     
  }
