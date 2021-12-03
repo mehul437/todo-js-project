@@ -62,7 +62,7 @@ function obtainvalue(){
     butto2.setAttribute("id", "del")
     butto2.setAttribute("type", "submit")
     butto2.innerHTML = "close"
-    butto2.setAttribute("onclick", "close()")
+    butto2.setAttribute("onclick", "drop()")
    
 
     
@@ -93,7 +93,8 @@ function dop() {
     
     
 }
-function close(){
+function drop(){
+    
     var master = document.getElementById("main")
     master.style.filter = "none"
     var del = document.getElementById("inputbox")
@@ -181,7 +182,7 @@ function obtaindata(el){
     butto2.setAttribute("id", "del")
     butto2.setAttribute("type", "submit")
     butto2.innerHTML = "close"
-    butto2.setAttribute("onclick", "close()")
+    butto2.setAttribute("onclick", "drop()")
 
 
     addres=el
