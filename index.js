@@ -1,5 +1,9 @@
 function create(){
-    console.log("done")
+    if (document.getElementById("innermain").contains(document.getElementById("empty"))){
+    var emp=document.getElementById("empty")
+    emp.remove()
+    }
+
     let list=document.createElement("div")
     list.setAttribute("class","boxx")
     list.setAttribute("id",val)
@@ -219,7 +223,16 @@ function delvalue(el){
           var mmain=main.parentNode.parentNode
            var parentbox=mmain.id
           mainbox=document.getElementById(parentbox)
+          var isemp=mainbox.parentNode
           mainbox.remove()
+          var count=isemp.childElementCount
+          if(count==0)
+          {
+              var empty=document.createElement("span")
+              empty.setAttribute("id","empty")
+              empty.innerText="task list is empty"
+              isemp.appendChild(empty)
+          }
     }
 
 }
